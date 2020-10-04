@@ -52,6 +52,10 @@ app.post('*', (req, res) => {        //this works when no routes are working
   })
 })
 
+app.get('/', (req, res)=> {
+  res.send({"message":"hii"})
+})
+
 
 
 //PORT
