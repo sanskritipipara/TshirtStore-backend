@@ -46,6 +46,11 @@ app.use("/api", orderRoutes);
 app.use("/api", stripeRoutes);
 app.use("/api", paymentBRoutes);
 
+
+app.get('/', (req, res)=> {
+  res.send({"message":"hii"})
+})
+
 app.post('*', (req, res) => {        //this works when no routes are working
   res.send({                    
     "error": "no page found"
